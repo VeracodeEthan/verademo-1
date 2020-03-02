@@ -10,8 +10,8 @@ pipeline {
                 echo 'Building..'
                 sh 'mvn package'
             }
-        }
-		stage('Security Assessment') {
+        }	
+        stage('Security Assessment') {
             parallel {
                 stage('SCA') {
                     steps {
