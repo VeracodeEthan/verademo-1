@@ -1,9 +1,8 @@
 pipeline {
-    // agent any
     agent {
-    docker {
-      // image 'node:8.16.0'
-      image 'nmichalov/veracode-tools'
+      docker {
+        image 'nmichalov/veracode-tools'
+      }
     }
     stages {
         stage('Build') {
